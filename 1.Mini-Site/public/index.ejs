@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MR.A | Mini Site</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="row p-2 header-background"></div>
+<%- include("./partials/navbar") %>
+<p class="site-title">Fast Food Mamad Pizza</p>
+<div class="container mt-3">
+    <div class="row margin-top">
+        <div class="col-sm-12 mt-5">
+            <h2 class="text-center">Welcome</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi error, ex
+                exercitationem expedita facilis id ipsa laudantium mollitia natus necessitatibus neque officia quaerat
+                quis repellat sapiente sit tenetur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi error, ex
+                exercitationem expedita facilis id ipsa laudantium mollitia natus necessitatibus neque officia quaerat
+                quis repellat sapiente sit tenetur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci commodi error, ex
+                exercitationem expedita facilis id ipsa laudantium mollitia natus necessitatibus neque officia quaerat
+                quis repellat sapiente sit tenetur.
+            </p>
+        </div>
+        <div class="row card-section w-100" id="fried">
+            <div class="col-sm-12 bt-2">
+                <div class="d-flex align-items-baseline">
+                    <h2>Fried</h2>
+                    <hr class="divider">
+                </div>
+                <div class="col-auto pb-5">
+                    <label class="sr-only" for="search">Search</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="search" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="row col-sm-12 pb-5" id="content">
+                    <% for(food of foods){ %>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card mt-5">
+                            <div style="background: url('assets/images/<%= food.image %>')"
+                                 class="card-img card-img-top"></div>
+                            <div class="card-body">
+                                <h5 class="card-title"><%= food.name %></h5>
+                                <p class="card-text"><%= food.description %></p>
+                                <a href="/food/<%= food.id %>" class="btn btn-primary buy"><i
+                                            class="bi bi-cart-plus"></i></a>
+                                <% if(food.discount) {%>
+                                    <div class="badge badge-pill badge-danger discount"><%=food.discount%>%</div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("./partials/footer") %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

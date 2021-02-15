@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Pizza;
+    src: url("../assets/font/DSChocolade.ttf");
+}
+body{overflow-x: hidden;}
+.container{    min-height: 50vh;
+}
+.header-background{
+    height: 100vh;
+    position: relative;
+    background-image: url("../assets/images/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.site-title{
+    width: 650px;
+    position: absolute;
+    top: 250px;
+    right: 150px;
+    color: #fff;
+    font-size: 7rem;
+    text-align: center;
+    font-family: Pizza;
+    line-height: 1;
+    animation: float 3s infinite;
+}
+@keyframes float {
+    0% {top: 280px}
+    50% {top: 260px}
+    100% {top: 280px}
+}
+nav{
+    direction: rtl;
+}
+.navbar-nav{
+    padding-right: 0;
+}
+.bg-s{
+    background-color: transparent;
+    width: 100%;
+    font-weight: bold;
+}
+.nav-item{margin-right: 5px}
+.active ,.nav-link:hover{
+    border-radius: 3px;
+    background-color: #f1c40f;
+}
+.navbar-brand{
+    border-left: 2px solid #fff;
+    padding-left: 15px;
+    margin-left: 10px;
+}
+.card-section{
+    background-color: #f5f5f8;
+    padding: 20px 0;
+}
+.d-flex h2{
+    padding-right: 15px;
+}
+.divider{
+    width: 100%;
+    border-top: 2px black solid;
+}
+.card-img{
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 300px;
+    margin: 0 !important;
+}
+.discount{
+    position: absolute;
+    top: -35px;
+    right: 10px;
+    font-size: 2rem;
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.d-flex{margin-bottom: 20px}
+.buy{
+    position: absolute;
+    bottom: -33px;
+    font-size: 2rem;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 33;
+}
+svg{
+    position: absolute;
+    left: 0;
+}
+.contact-info{
+    position: absolute;
+}
+.mt-5r {margin-top: 5rem!important;}
+.rounded-1_5 {border-radius: 1.5rem!important;}
+.o-box{
+    padding: 5px 4rem;
+    background: #2c3e50;
+    color: #fff;
+    font-size: 28px;
+}
+.food-image{
+    width: 50%;
+    margin: auto;
+}
+.count-info{
+    width: fit-content;
+    position: absolute;
+    border-radius: 30%;
+    background: #fff;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.count-info button{
+    margin: 0 -3px;
+    font-size: 3rem;
+    padding: 0 30px;
+}
+.l-circle{
+    border-radius: 50% 0 0 50%;
+    border-right: 1px solid;
+}
+.r-circle{
+    border-radius: 0 50% 50% 0;
+    border-left: 1px solid;
+}
+span i{
+    color: #ff6b6b;
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(0deg);
+}
+.activeIcon{
+    color: #e74c3c;
+    animation: hey 450ms linear;
+}
+@keyframes hey {
+    25% {transform: rotate(65deg)}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-65deg);}
+    100% {transform: rotate(0deg);}
+}
+b {color: #f1c40f}
+.bg-content{background: #ecf0f1}

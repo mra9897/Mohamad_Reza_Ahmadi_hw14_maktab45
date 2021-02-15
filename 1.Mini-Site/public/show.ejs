@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MR.A | Mini Site</title>
+    <link rel="shortcut icon" href="http://localhost:5002/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="http://localhost:5002/css/style.css">
+</head>
+<body>
+<%-include("./partials/navbar")%>
+<div class="container mt-5r">
+    <div class="d-flex justify-content-center flex-column border bg-content pb-3">
+        <div class="o-box rounded" id="name"><%=food.name%></div>
+        <img src="../assets/images/<%=food.image%>" alt="pizza" id="image" class="food-image mt-3 rounded-1_5">
+        <div class="o-box mt-5 rounded position-relative w-100 d-flex justify-content-between">
+            <span class="like">
+                <i class="bi bi-heart" id="heart"></i>
+            Like
+            </span>
+            <span class="count-info">
+                <button class="btn btn-light l-circle" id="down">-</button>
+                <button class="btn btn-light rounded-0" id="count">1</button>
+                <button class="btn btn-light r-circle" id="up">+</button>
+            </span>
+            <span class="save">
+                <i class="bi bi-star" id="star"></i>
+            Save
+            </span>
+        </div>
+        <div class="o-box mt-5 w-100 pb-3 rounded">
+            <h2 class=" text-center">Food Information</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <b>Description: <%=food.description%></b>
+                    <span id="description"></span>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Prepare Time: </b>
+                    <span id="prep"><%=food.prep%></span> min
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Cooking Time: </b>
+                    <span id="cook"><%=food.cook%></span> min
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Calories: </b>
+                    <span id="calories"><%=food.calories%></span> cal
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Servings: </b>
+                    <span id="servings"><%=food.serving%></span>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Price: </b>
+                    <span id="price"><%=food.price%></span>$
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <b>Discount: </b>
+                    <span id="discount"><%=food.discount%></span>%
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success mt-3 w-25 ml-auto mr-auto" onclick="alert('your order has been saved!')">Submit Order</button>
+    </div>
+</div>
+<%-include("./partials/footer")%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="http://localhost:5002/js/show.js"></script>
+</body>
+</html>
